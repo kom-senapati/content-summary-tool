@@ -2,6 +2,7 @@ import { AlignLeft, List } from 'lucide-react'
 
 import { Label } from '@/components/ui/label'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
+import { useCopilotAction, useCopilotReadable } from '@copilotkit/react-core'
 
 interface SummaryModeSelectorProps {
     summaryMode: 'paragraph' | 'bullet'
@@ -9,6 +10,23 @@ interface SummaryModeSelectorProps {
 }
 
 export const SummaryModeSelector = ({ summaryMode, setSummaryMode }: SummaryModeSelectorProps) => {
+    useCopilotReadable({
+        description: "Summary mode",
+        value: summaryMode,
+    })
+
+    useCopilotAction({
+        name: "Change summary mode",
+        description: "Change the mode of the summary",
+        parameters: [{
+            name: "mode",
+            type: "string",
+            value: summaryMode
+        }],
+        handler: (args) => {
+            setSummaryMode(args.mode as 'paragraph' | 'bullet')
+        }
+    })
     return (
         <div className="flex items-center gap-4">
             <Label htmlFor="summary-mode">Summary Mode</Label>

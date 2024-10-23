@@ -9,6 +9,7 @@ import { InputTextArea } from '@/app/_components/input-text-area'
 import { SummaryModeSelector } from '@/app/_components/summary-mode-selector'
 import { SummaryLengthSlider } from '@/app/_components/summary-length-slider'
 import { SummarySettingsDialog } from '@/app/_components/summary-settings-dialog'
+import { useCopilotAction, useCopilotReadable } from '@copilotkit/react-core'
 
 export function ContentSummaryTool() {
   const [input, setInput] = useState('')
@@ -28,6 +29,22 @@ export function ContentSummaryTool() {
 
   const wordCount = input.split(/\s+/).filter((word) => word.length > 0).length
   const sentenceCount = input.split(/[.!?]+/).filter((sentence) => sentence.trim().length > 0).length
+
+  useCopilotReadable({
+    description: "Content to be summarized",
+    value: input,
+  })
+
+  useCopilotReadable({
+    description: "Summary of the content",
+    value: summary,
+  })
+
+  useCopilotAction({
+    name: "Summarize",
+    description: "Call the summarization action!",
+    handler: handleSummarize
+  })
 
   return (
     <main className="container py-6 px-4 md:px-6 mx-auto overflow-hidden flex items-center justify-center">

@@ -2,6 +2,7 @@ import { Settings } from 'lucide-react'
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
+import { useCopilotAction, useCopilotReadable } from '@copilotkit/react-core'
 
 interface SummarySettingsDialogProps {
     summaryPrompt: string
@@ -9,6 +10,23 @@ interface SummarySettingsDialogProps {
 }
 
 export const SummarySettingsDialog = ({ summaryPrompt, setSummaryPrompt }: SummarySettingsDialogProps) => {
+    useCopilotReadable({
+        description: "Prompt for the summary",
+        value: summaryPrompt,
+    })
+
+    useCopilotAction({
+        name: "Change summary prompt",
+        description: "Change the prompt for the summary",
+        parameters: [{
+            name: "prompt",
+            type: "string",
+            value: summaryPrompt
+        }],
+        handler: (args) => {
+            setSummaryPrompt(args.prompt)
+        }
+    })
     return (
         <Dialog>
             <DialogTrigger asChild>

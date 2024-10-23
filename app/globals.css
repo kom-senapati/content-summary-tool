@@ -34,6 +34,17 @@ body {
     --destructive-foreground: 0 0% 100%;
     --ring: 213 13% 16%;
     --radius: 0.5rem;
+
+    --copilot-kit-primary-color: hsl(213, 13%, 16%);
+    --copilot-kit-contrast-color: hsl(213, 13%, 76%);
+    --copilot-kit-secondary-color: hsl(213, 3%, 75%);
+    --copilot-kit-secondary-contrast-color: hsl(213, 3%, 15%);
+    --copilot-kit-background-color: hsl(0, 0%, 100%);
+    --copilot-kit-muted-color: hsl(0, 12%, 30%);
+    --copilot-kit-separator-color: hsl(0, 0%, 95%);
+    --copilot-kit-scrollbar-color: hsl(0, 0%, 95%);
+    --copilot-kit-response-button-color: hsl(213, 13%, 76%);
+    --copilot-kit-response-button-background-color: hsl(213, 13%, 16%);
   }
 
   .dark {
@@ -57,6 +68,17 @@ body {
     --destructive-foreground: 0 0% 100%;
     --ring: 210 17% 82%;
     --radius: 0.5rem;
+
+    --copilot-kit-primary-color: hsl(210, 17%, 82%);
+    --copilot-kit-contrast-color: hsl(210, 17%, 22%);
+    --copilot-kit-secondary-color: hsl(210, 7%, 25%);
+    --copilot-kit-secondary-contrast-color: hsl(210, 7%, 85%);
+    --copilot-kit-background-color: hsl(216, 28%, 7%);
+    --copilot-kit-muted-color: hsl(216, 12%, 65%);
+    --copilot-kit-separator-color: hsl(216, 18%, 12%);
+    --copilot-kit-scrollbar-color: hsl(216, 18%, 12%);
+    --copilot-kit-response-button-color: hsl(210, 17%, 22%);
+    --copilot-kit-response-button-background-color: hsl(210, 17%, 82%);
   }
 }
 

@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/b742a6e4-d7f6-4fc8-941d-280560ec8fb3" width="400" />
+    <h2>Content Summary Tool</h2>
+</div>
 
-## Getting Started
+### ⭐ About
+A tool where users can input long-form content, and the app generates concise summaries
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+$~$
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<details>
+<summary>Screenshots</summary>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![image](https://github.com/user-attachments/assets/648d2bfa-e48b-4288-9628-b5a2b01fee66)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+</details>
 
-## Learn More
+$~$
 
-To learn more about Next.js, take a look at the following resources:
+### 📤 Set up
+- These are the steps required to install the project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Get API key from [GROQ](https://console.groq.com).
+2. Clone the repo
+   ```sh
+   git clone https://github.com/kom-senapati/content-summary-tool
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API Keys in `.env.local` as stated in `.env.example`.
+5. Run development server
+   ```sh
+   npm run dev
+   ```
